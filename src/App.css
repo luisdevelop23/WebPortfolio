@@ -1,0 +1,80 @@
+body {
+  background-color: #121212;
+  opacity: 2;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.bg-beta {
+  background-color: rgb(34 197 94);
+}
+
+.bg-graidant {
+  --tw-gradient-stops: #cafe01, #dbff51, #22c55e;
+}
+
+@font-face {
+  font-family: "NotoBlack";
+  src: url(assets/font/NotoSansKR-Black.ttf);
+}
+.NBlack {
+  font-family: "NotoBlack";
+}
+@font-face {
+  font-family: "NotoBold";
+  src: url(assets/font/NotoSansKR-Bold.ttf);
+}
+.NBold {
+  font-family: "NotoBold";
+}
+@font-face {
+  font-family: "NotoExtrabold";
+  src: url(assets/font/NotoSansKR-ExtraBold.ttf);
+}
+.NExtrabold {
+  font-family: "NotoExtrabold";
+}
+@font-face {
+  font-family: "NotoExLight";
+  src: url(assets/font/NotoSansKR-ExtraLight.ttf);
+}
+.NExLight {
+  font-family: "NotoExLight";
+}
+@font-face {
+  font-family: "NotoLig";
+  src: url(assets/font/NotoSansKR-Light.ttf);
+}
+.NLig {
+  font-family: "NotoLig";
+}
+@font-face {
+  font-family: "NotoMed";
+  src: url(assets/font/NotoSansKR-Medium.ttf);
+}
+.NMed {
+  font-family: "NotoMed";
+}
+@font-face {
+  font-family: "NotoReg";
+  src: url(assets/font/NotoSansKR-Regular.ttf);
+}
+.NReg {
+  font-family: "NotoReg";
+}
+@font-face {
+  font-family: "NotoSB";
+  src: url(assets/font/NotoSansKR-SemiBold.ttf);
+}
+.NSB {
+  font-family: "NotoSB";
+}
+
+@font-face {
+  font-family: "NotoThin";
+  src: url(assets/font/NotoSansKR-Thin.ttf);
+}
+.NThin {
+  font-family: "NotoThin";
+}
