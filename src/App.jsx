@@ -13,7 +13,7 @@ function App() {
   });
   return (
     <>
-      <div className=" flex flex-col bg-red-500 w-full justify-center items-center ">
+      <div className=" flex flex-col w-full justify-center items-center ">
         <NavBar />
         <Header />
         <Projects/>
