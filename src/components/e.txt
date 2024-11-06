@@ -1,10 +1,4 @@
-import img1 from "../assets/webp/py_1.webp";
-import projectsList from "../data/projectsList";
-const Projects = () => {
-  return (
-    <div className="w-9/12">
-      <h1 className="NSB py-20 text-center text-2xl text-white">Projects</h1>
-      {
+{/* {
         projectsList.map((project) => {
           return (
             <div className="h-[80vh]   flex justify-center items-center">
@@ -23,7 +17,7 @@ const Projects = () => {
                     {project.description}
                   </p>
                   <div className="w-full">
-                    <h3>Tools used:</h3>
+                    <h3  className="py-3 text-xl">Tools used:</h3>
                     <ul className="py-3 grid grid-cols-2 list-disc mx-auto  px-10">
                       {project.tools.map((tool) => {
                         return <li>{tool}</li>;
@@ -40,10 +34,4 @@ const Projects = () => {
           </div>
           )
         })
-      }
-
-    </div>
-  );
-};
-
-export default Projects;
+      } */}

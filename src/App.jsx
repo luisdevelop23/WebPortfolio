@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import "./Deo.css";
 import NavBar from "./components/NavBar";
-import Projects from "./layout/Projects";
-import Header from "./layout/header";
+import Projects from "./components/Projects";
+import Header from "./components/Header";
+import Skilss from "./components/Skilss";
+import AboutMe from "./components/AboutMe";
 function App() {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -13,10 +15,11 @@ function App() {
   });
   return (
     <>
-      <div className=" flex flex-col w-full justify-center items-center ">
+      <div className="flex w-full flex-col items-center justify-center">
         <NavBar />
         <Header />
-        <Projects/>
+        <AboutMe />
+        <Projects />
       </div>
     </>
   );
