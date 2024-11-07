@@ -19,57 +19,64 @@ export const projectsList = [
     url: "https://luis-saavedra.github.io/IRestaurant/",
     github: "https://github.com/luisdevelop23/IRestaurant",
     tools: ["HTML", "CSS", "Aos js", "Bootstrap"],
+    type: [1]
   },
   {
     id: 2,
     title: "KITARA",
     description:
-      "Web application to represent a sandal brand, with a responsive design that ensures an optimal experience both on the web and on mobile devices, showing products and highlighting the brand identity",
+      "Website representing the sandals brand, responsive web and mobile only",
     image: img2,
     url: "https://resilient-halva-5599d9.netlify.app/",
     github: "https://github.com/luisdevelop23/KITARA",
     tools: ["HTML", "CSS", "Javascript", "React", "Tailwind", "Vite"],
+    type: 1
   },
   {
     id: 3,
     title: "Market Met",
     description:
-      "Responsive e-commerce web application that allows the visualization and consultation of products, with data stored and managed in Supabase. It has a user authentication and login system based on the Supabase database.",
+      "Ecommers developed in react, with database stored in supabase",
     image: img3,
     url: "https://market-met.vercel.app/",
     github: "https://github.com/luisdevelop23/MarketMet",
     tools: ["HTML", "CSS", "Javascript", "Supabase", "Tailwind", "Vite"],
+    type: 2
   },
   {
     id: 4,
     title: "MetProfile",
     description:
-      "Web application in React to create virtual resumes, allowing users to design and personalize their professional profile quickly and intuitively.",
+      "Web application in React to create virtual resumes, in a work environment",
     image: img4,
     url: "https://met-profile.vercel.app/",
     github: "https://github.com/luisdevelop23/MetProfile",
     tools: ["HTML", "CSS", "Javascript", "Supabase", "Tailwind", "Vite"],
+    type: 2
+
   },
   {
     id: 5,
     title: "PokeDex",
     description:
-      "Web application that consumes the public Pokémon API to display data for each species. Developed with React and Vite, and styled with TailwindCSS, it features an attractive and responsive visual design to improve the user experience.",
+      "Web application, developed in React that shows information about all the pokemon, consuming its API",
     image: img5,
     url: "https://pokemon-page-react-tailwindcss-vite.vercel.app/",
     github:
       "https://github.com/luisdevelop23/Pokemon-Page-React-Tailwindcss-Vite",
     tools: ["HTML", "CSS", "Javascript", "React", "Tailwind", "Vite"],
+    type: 2
   },
   {
     id: 6,
     title: "Todo List",
     description:
-      "Task application in React that allows you to create, manage and store tasks in localStorage, maintaining them between sessions. Each task can be easily added and removed, offering a fast and intuitive experience.",
+      "Task web application, stored in localstorage developed in React.js",
     image: img6,
     url: "https://todo-list-react-vite.vercel.app/",
     github: "https://github.com/luisdevelop23/Todo-List-React-Vite",
     tools: ["HTML", "CSS", "Javascript", "React", "Tailwind", "Vite"],
+    type: 2
   },
   {
     id: 7,
@@ -80,22 +87,24 @@ export const projectsList = [
     url: "https://frabjous-croissant-2d3695.netlify.app/",
     github: "https://github.com/luisdevelop23/NFTS",
     tools: ["HTML", "CSS", "Javascript", "React", "Tailwind", "Vite"],
+    type: 2
   },
   {
     id: 8,
     title: "Vet",
     description:
-      "Aplicación web para veterinarias que permite gestionar y almacenar información de pacientes animales en localStorage, facilitando el registro y seguimiento de cada caso de manera sencilla y accesible.",
+      "application to manage patients in a veterinary clinic developed in React.js",
     image: img8,
     url: "https://legendary-rugelach-573d87.netlify.app/",
     github: "https://github.com/luisdevelop23/Veterinari-react",
     tools: ["HTML", "CSS", "Javascript", "React", "Tailwind", "Vite"],
+    type: 2
   },
   {
     id: 9,
     title: "Countries",
     description:
-      "Web application that consumes an API to display detailed data for each country. Its responsive design guarantees an optimal experience on devices of any size, making it easy to access and view information.",
+      "Responsive page, which queries graphql API countries",
     image: img9,
     url: "https://paises-react--six.vercel.app/",
     github: "https://github.com/luisdevelop23/paises-react-tailwindcss-graphql",
@@ -103,11 +112,15 @@ export const projectsList = [
       "HTML",
       "CSS",
       "Javascript",
+      "Javascript",
+      "Javascript",
       "React",
+      "Javascript",
       "Tailwind",
       "Vite",
       "GraphQL",
     ],
+    type: 2
   },
   {
     id: 10,
@@ -118,6 +131,7 @@ export const projectsList = [
     github:
       "https://github.com/luisdevelop23/calculator---tailwinds---javaScript-",
     tools: ["HTML", "CSS", "Javascript", "Tailwind"],
+    type: 2
   },
 ];
 export default projectsList;

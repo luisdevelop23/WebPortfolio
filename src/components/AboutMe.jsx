@@ -3,9 +3,9 @@ import Skilss from './Skilss'
 
 const AboutMe = () => {
   return (
-    <div className="flex w-9/12 py-20">
-    <div className="flex w-6/12 flex-col gap-y-6 p-20">
-      <h1 className="NSB text-3xl font-bold uppercase text-[#4648f7]">
+    <div className="flex w-9/12 h-[60vh] py-10">
+    <div className="flex w-6/12 flex-col gap-y-6 p-20 ">
+      <h1 className="NSB text-5xl font-bold uppercase text-[#4648f7]">
         About Me
       </h1>
       <p className="NSB text-zinc-400 dark:text-zinc-100 text-justify">
