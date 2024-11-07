@@ -79,4 +79,9 @@ body {
   font-family: "NotoThin";
 }
 
-
+.box-rgb {
+  box-shadow:
+    -90px -65px 135px 101px rgba(0, 142, 255, 0.25),
+    -90px -65px 135px 101px rgba(0, 142, 255, 0.25),
+    90px -65px 135px 101px rgba(158, 0, 209, 0.25);
+}

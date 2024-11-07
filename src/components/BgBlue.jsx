@@ -34,7 +34,7 @@ const BgBlue = () => {
         </svg>
       </span>
 
-      <span className="flex h-full flex-col justify-between">
+      <span className="hidden md:flex h-full flex-col justify-between">
         <svg
           className=""
           width="600"
@@ -95,7 +95,7 @@ const BgBlue = () => {
         </svg>
       </span>
 
-      <span className="d q k nn">
+      <span className="hidden md:flex">
         <svg
           width="491"
           height="490"
