@@ -16,10 +16,10 @@ export const projectsList = [
     description:
       "Page that presents a restaurant, as a chef and products, a project that I did in 1 day.",
     image: img1,
-    url: "https://luis-saavedra.github.io/IRestaurant/",
-    github: "https://github.com/luisdevelop23/IRestaurant",
+    url: "https://dazzling-narwhal-ecf3bb.netlify.app/",
+    github: null,
     tools: ["HTML", "CSS", "Aos js", "Bootstrap"],
-    type: [1]
+    type: 1
   },
   {
     id: 2,

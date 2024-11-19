@@ -3,7 +3,7 @@ import img from "../assets/webp/py_1.webp";
 const CardProject = ({ app }) => {
   const { id, title, description, image, url, github, tools } = app;
   return (
-    <div className="flex w-full flex-col rounded-xl bg-zinc-900 md:px-5 md:pt-4">
+    <div className="flex w-full flex-col rounded-xl bg-zinc-900 md:px-3 md:pt-3" key={id}>
       <img className="rounded-lg" src={image} alt="" />
       <div className="flex items-center justify-between">
         <h1 className="NSB flex items-center mx-2 text-md md:text-2xl text-zinc-300 transition-all duration-100 hover:text-[#4648f7]">
@@ -29,13 +29,13 @@ const CardProject = ({ app }) => {
         >
           <span className="icon-[icon-park-solid--web-page]"></span>
         </a>
-        <a
+        {github && <a
           href={github}
           target="_blank"
           className="md:p-3 p-1 text-md md:text-3xl text-zinc-100 transition-all duration-100 hover:text-[#4648f7]"
         >
           <span className="icon-[lucide--github]"></span>
-        </a>
+        </a>}
       </div>
     </div>
   );
