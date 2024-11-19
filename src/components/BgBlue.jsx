@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const BgBlue = () => {
+  const circleRefs = useRef([]);
+
+  useEffect(() => {
+    // Animar cada círculo con un efecto de flotación o pulso
+    circleRefs.current.forEach((circle, index) => {
+      gsap.to(circle, {
+        y: index % 2 === 0 ? -20 : 20, // Animación alternada
+        opacity: 0.8,
+        repeat: -1, // Repetir infinitamente
+        yoyo: true, // Animación de ida y vuelta
+        duration: 4 + index * 0.5, // Duración escalonada
+        ease: "power1.inOut",
+      });
+    });
+  }, []);
+
   return (
-    <div className="absolute z-10 flex h-full w-full items-end justify-between">
+    <div className="hidden md:absolute z-10 flex h-[90vh] w-full items-end g-red-400 justify-between">
       <span className="flex h-full flex-col justify-start">
         <svg
-          width="48"
-          height="95"
-          viewBox="0 48 48 48"
+          ref={(el) => (circleRefs.current[0] = el)}
+           width="150"
+          height="105"
+          viewBox="0 0 48 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -26,9 +44,9 @@ const BgBlue = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(0.5) rotate(90) scale(95)"
             >
-              <stop stop-color="white"></stop>
-              <stop offset="0.569" stop-color="#F0F4FD"></stop>
-              <stop offset="0.993" stop-color="#D9E0F0"></stop>
+              <stop stopColor="white"></stop>
+              <stop offset="0.569" stopColor="#F0F4FD"></stop>
+              <stop offset="0.993" stopColor="#D9E0F0"></stop>
             </radialGradient>
           </defs>
         </svg>
@@ -36,36 +54,22 @@ const BgBlue = () => {
 
       <span className="hidden md:flex h-full flex-col justify-between">
         <svg
-          className=""
+          ref={(el) => (circleRefs.current[1] = el)}
           width="600"
-          height="105"
-          viewBox="0 0 48 95"
+          height="205"
+          viewBox="0 0 48 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle
             cx="70.5"
-            cy="30.5"
-            r="47.5"
+            cy="50"
+            r="17.5"
             fill="url(#paint0_radial_6:121)"
           ></circle>
-          <defs>
-            <radialGradient
-              id="paint0_radial_6:121"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(0.5) rotate(90) scale(95)"
-            >
-              <stop stop-color="white"></stop>
-              <stop offset="0.569" stop-color="#F0F4FD"></stop>
-              <stop offset="0.993" stop-color="#D9E0F0"></stop>
-            </radialGradient>
-          </defs>
         </svg>
         <svg
-          className=""
+          ref={(el) => (circleRefs.current[2] = el)}
           width="200"
           height="95"
           viewBox="0 0 48 95"
@@ -73,40 +77,27 @@ const BgBlue = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle
-            cx="0.5"
-            cy="90.5"
-            r="47.5"
+            cx="70.5"
+            cy="50"
+            r="27.5"
             fill="url(#paint0_radial_6:121)"
           ></circle>
-          <defs>
-            <radialGradient
-              id="paint0_radial_6:121"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(0.5) rotate(90) scale(95)"
-            >
-              <stop stop-color="white"></stop>
-              <stop offset="0.569" stop-color="#F0F4FD"></stop>
-              <stop offset="0.993" stop-color="#D9E0F0"></stop>
-            </radialGradient>
-          </defs>
         </svg>
       </span>
 
       <span className="hidden md:flex">
-        <svg
-          width="491"
-          height="490"
+        {/* <svg
+          ref={(el) => (circleRefs.current[3] = el)}
+          width="701"
+          height="690"
           viewBox="0 0 491 490"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle
-            cx="356.5"
-            cy="356.5"
-            r="356.5"
+            cx="256.5"
+            cy="246.5"
+            r="216.5"
             fill="url(#paint0_linear_6:37)"
           ></circle>
           <defs>
@@ -118,11 +109,11 @@ const BgBlue = () => {
               y2="713"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#3974f1"></stop>
-              <stop offset="1" stop-color="#1E3BB3"></stop>
+              <stop stopColor="#3974f1"></stop>
+              <stop offset="1" stopColor="#1E3BB3"></stop>
             </linearGradient>
           </defs>
-        </svg>
+        </svg> */}
       </span>
     </div>
   );

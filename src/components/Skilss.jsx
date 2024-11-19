@@ -1,80 +1,72 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { skillsList } from "../data/skillsList";
+import { gsap } from "gsap";
 
 const Skilss = () => {
+  const skillsRef = useRef(null);
+
+  useEffect(() => {
+    const skillsElement = skillsRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            gsap.fromTo(
+              skillsElement.children,
+              { opacity: 0, y: 20 },
+              {
+                opacity: 1,
+                y: 0,
+                stagger: 0.3,
+                duration: 1,
+                ease: "power3.out",
+              }
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 } 
+    );
+
+    observer.observe(skillsElement);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const SkillsFrontend = skillsList[0];
+  const SkillsBackend = skillsList[1];
+
   return (
-    <div className="flex md:w-6/12 flex-col gap-y-6 p-5 md:p-20">
-      <h1 className="NSB text-2xl md:text-3xl font-bold  text-[#4648f7]">
+    <div
+      ref={skillsRef}
+      className="flex flex-col gap-y-6 p-5 md:w-6/12 md:p-20"
+    >
+      <h1 className="NSB text-2xl font-bold text-[#4648f7] md:text-3xl">
         Skills
       </h1>
       <div className="NSB flex justify-around text-zinc-400 dark:text-zinc-100">
         <div className="w-full">
           <h2 className="MD:text-2xl text-lg">Frontend</h2>
-          <ul className="list-inside md:pl-4 text-sm md:text-lg">
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
-              HTML & CSS
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
-              JavaScript
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
-              ASP.NET{" "}
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
-              React
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
-              Bootstrap
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
-              TailwindCss
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
-              Bootstrap
-            </li>
+          <ul className="list-inside pt-1 text-sm md:pl-4 md:text-lg">
+            {SkillsFrontend.map((i, index) => (
+              <li key={index}>
+                <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
+                {i.name}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="px- flex w-full flex-col">
-          <h2 className="md:text-2xl text-lg">Backend / Database</h2>
-          <ul className="list-inside md:pl-4 text-sm md:text-lg">
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>{" "}
-              Java
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>{" "}
-              Springboot
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>{" "}
-              .Net
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>{" "}
-              GraphQL
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>{" "}
-              Supabase
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>{" "}
-              SQL
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>{" "}
-              SQL Server
-            </li>
-            <li>
-              <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>{" "}
-              MySql
-            </li>
+          <h2 className="text-lg md:text-2xl">Backend / Database</h2>
+          <ul className="list-inside pt-1 text-sm md:pl-4 md:text-lg">
+            {SkillsBackend.map((i, index) => (
+              <li key={index}>
+                <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
+                {i.name}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
