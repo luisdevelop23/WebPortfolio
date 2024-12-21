@@ -12,25 +12,25 @@ const AboutMe = () => {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             gsap.fromTo(
               aboutTitle,
               { opacity: 0, y: -50 },
-              { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+              { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
             );
 
             gsap.fromTo(
               aboutText,
               { opacity: 0, x: -100 },
-              { opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.5 }
+              { opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.5 },
             );
 
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.5 } 
+      { threshold: 0.5 },
     );
 
     observer.observe(aboutTitle);
@@ -40,17 +40,17 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div className="flex w-full flex-col md:h-[60vh] xl:w-10/12  md:flex-row md:py-10">
-      <div className="flex flex-col gap-y-6 p-5 md:w-6/12 ">
+    <div className="flex w-11/12 flex-col md:h-[60vh] md:flex-row md:py-10 lg:w-11/12 xl:w-10/12">
+      <div className="flex flex-col gap-y-6 p-5 md:w-6/12">
         <h1
           ref={aboutTitleRef}
-          className="NSB font-bold text-2xl text-[#3b82f6] md:text-5xl"
+          className="NSB text-2xl font-bold text-[#3b82f6] md:text-5xl"
         >
           About Me
         </h1>
         <p
           ref={aboutTextRef}
-          className="NSB text-sm  md:text-lg  text-zinc-400 dark:text-zinc-100"
+          className="NSB text-sm text-zinc-400 md:text-lg dark:text-zinc-100"
         >
           I am a software development student at ISIL, oriented to web
           development with technologies such as React and JavaScript, constantly

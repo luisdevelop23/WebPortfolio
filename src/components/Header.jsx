@@ -42,13 +42,12 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="relative flex h-[90vh] items-center justify-center md:h-[90vh] xl:w-10/12">
-      <BgBlue />
+    <div className="relative flex h-[90vh] w-11/12 items-center justify-center md:h-[90vh] lg:w-10/12 xl:w-10/12">
       <div className="relative flex h-full px-3 md:w-full">
         <div className="z-30 flex flex-col items-center justify-center md:w-7/12">
           <div className="flex w-full flex-col" ref={textRef}>
             <h1 className="NSB w-full text-center text-xl text-white md:text-left md:text-4xl">
-              <span className="pr-4 text-gray-500 ">{">"}</span>
+              <span className="pr-4 text-gray-500">{">"}</span>
               Hello I'm Luis Alfredo Saavedra Falcon{" "}
               <span className="icon-[twemoji--waving-hand]"></span>
               <span className="animate-ping">_</span>
@@ -74,10 +73,18 @@ const Header = () => {
               ref={buttonRef}
               className="NSB flex justify-center gap-x-4 py-5 text-white md:justify-start"
             >
-              <a className="rounded-full bg-[#3b82f6] px-4 py-2 font-bold">
+              <a
+                className="rounded-full bg-[#3b82f6] px-4 py-2 font-bold"
+                href="mailto:luis.xd.saavedra@gmail.com"
+                target="_blank"
+              >
                 Get In Touch
               </a>
-              <a className="rounded-full bg-[#9333ea] px-4 py-2 font-bold">
+              <a
+                className="rounded-full bg-[#9333ea] px-4 py-2 font-bold"
+                href="https://drive.google.com/file/d/1vwwhVpmtY9N1mkbLFoCTU_DEm_O4jzfX/view?usp=sharing"
+                target="_blank"
+              >
                 View Resume
               </a>
             </div>

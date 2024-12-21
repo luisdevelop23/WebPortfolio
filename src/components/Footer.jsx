@@ -37,7 +37,7 @@ const Footer = () => {
   return (
     <div
       ref={footerRef}
-      className="flex md:h-[50vh] h-[70vh] md:w-8/12 flex-col items-center justify-center gap-y-32 text-zinc-100"
+      className="flex h-[70vh] flex-col items-center justify-center gap-y-32 text-zinc-100 md:h-[50vh] md:w-8/12"
     >
       <h1 className="NSB text-4xl font-bold text-[#3b82f6] md:text-5xl">
         Connect with me
@@ -65,7 +65,9 @@ const Footer = () => {
           </a>
         </li>
         <li className="px-4 text-4xl font-bold text-zinc-100 md:text-5xl">
-          <span className="icon-[majesticons--mail]"></span>
+          <a href="mailto:luis.xd.saavedra@gmail.com" target="_blank">
+            <span className="icon-[majesticons--mail]"></span>
+          </a>
         </li>
       </ul>
     </div>

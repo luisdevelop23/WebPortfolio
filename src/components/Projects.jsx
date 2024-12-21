@@ -20,7 +20,7 @@ const Projects = () => {
     return () => ctx.revert();
   }, [projects]);
 
-  const projectsfilter = (e) => {
+  const projectsFilter = (e) => {
     const type = parseInt(e.target.value);
     setProjects(projectsList.filter((project) => project.type === type));
     setFilter(type);
@@ -33,11 +33,11 @@ const Projects = () => {
 
   return (
     <section className="flex w-full justify-center bg-zinc-800">
-      <div className="flex flex-col items-center gap-y-4 py-20 md:w-10/12">
+      <div className="flex w-11/12 flex-col items-center gap-y-4 py-20 lg:w-11/12 xl:w-10/12">
         <h1 className="NSB text-center text-2xl font-bold text-[#f43f5e] md:text-5xl">
-          Projects 
+          Projects
         </h1>
-        <h2 className="NSB md:text-md mx-4 text-center text-sm  md:text-lg text-zinc-300 md:w-5/12">
+        <h2 className="NSB md:text-md mx-4 text-center text-sm text-zinc-300 md:w-5/12 md:text-lg">
           Projects I have independently undertaken and completed through
           self-directed learning or as part of my studies.
         </h2>
@@ -53,7 +53,7 @@ const Projects = () => {
             All
           </button>
           <button
-            onClick={projectsfilter}
+            onClick={projectsFilter}
             value={1}
             className={`NSB rounded-full ${
               filter === 1 && "bg-[#f43f5e]"
@@ -63,7 +63,7 @@ const Projects = () => {
             Graphics
           </button>
           <button
-            onClick={projectsfilter}
+            onClick={projectsFilter}
             value={2}
             className={`NSB rounded-full ${
               filter === 2 && "bg-[#f43f5e]"
@@ -76,10 +76,10 @@ const Projects = () => {
 
         <div
           ref={gridRef}
-          className="mx-4 grid grid-cols-2 gap-3 md:w-10/12 md:gap-10 lg:grid-cols-3"
+          className="xs:grid-cols-1 mx-4 grid gap-3 md:col-span-2 md:gap-10 lg:grid-cols-3"
         >
-          {projects.map((app) => (
-            <CardProject app={app} key={app.id} />
+          {projects.map((project) => (
+            <CardProject key={project.id} app={project} />
           ))}
         </div>
       </div>

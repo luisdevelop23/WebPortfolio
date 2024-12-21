@@ -1,49 +1,62 @@
 const CardProject = ({ app }) => {
-  const { id, title, description, image, url, github, tools } = app;
-  return (
-    <div
-      className="project-card flex w-full flex-col gap-y-1 rounded-xl bg-zinc-900 md:px-3 md:pt-3"
-      key={id}
-    >
-      <img className="rounded-lg" src={image} alt="" />
+  const { title, description, image, url, github, tools } = app;
 
-      <div className="flex items-center justify-between">
-        <h1 className="NSB text-md mx-2 flex items-center text-zinc-300 transition-all duration-100 hover:text-[#9333ea] md:text-2xl">
-          {title}
-        </h1>
+  return (
+    <div className="project-card group flex flex-col justify-between rounded-xl bg-zinc-900 p-5 shadow-lg transition-all  hover:shadow-2xl">
+      {/* Imagen del proyecto */}
+      <div className="overflow-hidden rounded-lg">
+        <img
+          className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          src={image}
+          alt={title.en}
+        />
       </div>
-      <p className="NSB mx-2 text-[10px] text-zinc-100 md:text-justify">
-        {description}
+
+      {/* Título del proyecto */}
+      <h1 className="NSB mt-4 text-md md:text-xl font-semibold text-zinc-100 transition-all duration-300 group-hover:text-[#9333ea]">
+        {title.en}
+      </h1>
+
+      {/* Descripción */}
+      <p className="NSB mt-2 line-clamp-3 text-sm text-zinc-300">
+        {description.en}
       </p>
-      <div className="NSB mx-2 flex w-full flex-col text-[10px] text-zinc-100 md:text-sm">
-        <span className="flex">
-          <ul className="flex flex-wrap pt-2">
-            <li className="pr-2">Tools:</li>
-            {tools.map((i, index) => (
-              <li key={index} className="pr-1 md:text-sm">
-                {i},
-              </li>
-            ))}
-          </ul>
-        </span>
+
+      {/* Herramientas */}
+      <div className="NSB mt-3 flex flex-wrap">
+        <span className="font-medium text-zinc-100">Tools:</span>
+        {tools.map((tool, index) => (
+          <span
+            key={index}
+            className="inline-block rounded-lg  px-2  text-sm font-semibold text-white"
+          >
+            {tool}
+            {index === tools.length - 1 ? "" : ","}
+          </span>
+        ))}
       </div>
-      <div className="flex h-full w-full items-end justify-around py-1">
+
+      {/* Enlaces */}
+      <div className="mt-4 flex items-center justify-between gap-2">
+        {/* Enlace al demo en vivo */}
         <a
           href={url}
           target="_blank"
-          rel="noreferrer"
-          className="NSB text-md flex items-center p-1 text-xl text-zinc-100 transition-all duration-100 hover:text-[#9333ea] md:p-3 md:text-3xl"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center rounded-lg bg-[#3b82f6] px-5 py-2 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#2563eb]"
         >
-          <span className="icon-[icon-park-solid--web-page]"></span>
+          Live Demo
         </a>
+
+        {/* Enlace a GitHub (si existe) */}
         {github && (
           <a
             href={github}
             target="_blank"
-            rel="noreferrer"
-            className="text-md p-1 text-xl text-zinc-100 transition-all duration-100 hover:text-[#9333ea] md:p-3 md:text-3xl"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center rounded-lg bg-[#333] px-5 py-2 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#444]"
           >
-            <span className="icon-[lucide--github]"></span>
+            GitHub
           </a>
         )}
       </div>
