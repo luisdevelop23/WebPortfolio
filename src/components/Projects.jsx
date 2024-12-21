@@ -34,10 +34,10 @@ const Projects = () => {
   return (
     <section className="flex w-full justify-center bg-zinc-800">
       <div className="flex flex-col items-center gap-y-4 py-20 md:w-10/12">
-        <h1 className="NSB text-center text-2xl font-bold text-[#4648f7] md:text-5xl">
-          Projects
+        <h1 className="NSB text-center text-2xl font-bold text-[#f43f5e] md:text-5xl">
+          Projects 
         </h1>
-        <h2 className="NSB md:text-md mx-4 text-center text-sm text-zinc-300 md:w-5/12">
+        <h2 className="NSB md:text-md mx-4 text-center text-sm  md:text-lg text-zinc-300 md:w-5/12">
           Projects I have independently undertaken and completed through
           self-directed learning or as part of my studies.
         </h2>
@@ -46,8 +46,8 @@ const Projects = () => {
           <button
             onClick={projectsAll}
             className={`NSB rounded-full ${
-              filter === 0 && "bg-[#4648f7]"
-            } px-3 py-2 text-zinc-100 hover:bg-[#4648f7] md:px-4`}
+              filter === 0 && "bg-[#f43f5e]"
+            } px-3 py-2 text-zinc-100 hover:bg-[#f43f5e] md:px-4`}
             type="button"
           >
             All
@@ -56,8 +56,8 @@ const Projects = () => {
             onClick={projectsfilter}
             value={1}
             className={`NSB rounded-full ${
-              filter === 1 && "bg-[#4648f7]"
-            } px-3 py-2 text-zinc-100 hover:bg-[#4648f7] md:px-4`}
+              filter === 1 && "bg-[#f43f5e]"
+            } px-3 py-2 text-zinc-100 hover:bg-[#f43f5e] md:px-4`}
             type="button"
           >
             Graphics
@@ -66,8 +66,8 @@ const Projects = () => {
             onClick={projectsfilter}
             value={2}
             className={`NSB rounded-full ${
-              filter === 2 && "bg-[#4648f7]"
-            } px-3 py-2 text-zinc-100 hover:bg-[#4648f7] md:px-4`}
+              filter === 2 && "bg-[#f43f5e]"
+            } px-3 py-2 text-zinc-100 hover:bg-[#f43f5e] md:px-4`}
             type="button"
           >
             App

@@ -40,17 +40,17 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div className="flex w-full flex-col md:h-[60vh] md:w-9/12 md:flex-row md:py-10">
-      <div className="flex flex-col gap-y-6 p-5 md:w-6/12 md:p-20">
+    <div className="flex w-full flex-col md:h-[60vh] xl:w-10/12  md:flex-row md:py-10">
+      <div className="flex flex-col gap-y-6 p-5 md:w-6/12 ">
         <h1
           ref={aboutTitleRef}
-          className="NSB font-bold text-2xl text-[#4648f7] md:text-5xl"
+          className="NSB font-bold text-2xl text-[#3b82f6] md:text-5xl"
         >
           About Me
         </h1>
         <p
           ref={aboutTextRef}
-          className="NSB text-sm text-justify text-zinc-400 dark:text-zinc-100"
+          className="NSB text-sm  md:text-lg  text-zinc-400 dark:text-zinc-100"
         >
           I am a software development student at ISIL, oriented to web
           development with technologies such as React and JavaScript, constantly

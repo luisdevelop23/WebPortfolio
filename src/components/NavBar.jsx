@@ -29,18 +29,18 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className="w-full md:px-10 xl:w-10/12">
+    <div className="w-full  xl:w-10/12 py-2">
       <div className="flex" ref={navRef}>
         <div className="w-6/12 md:w-8/12">
           <div className="flex items-center p-4" ref={logoRef}>
-            <a className="text-lg font-bold text-white lg:text-3xl" href="">
+            <a className="text-lg font-bold text-white lg:text-4xl" href="">
               LUISDEVELOP
             </a>
           </div>
         </div>
         <ul className="flex w-6/12 items-center justify-around md:w-4/12 md:justify-between md:gap-x-8">
           <li
-            className="text-lg font-bold text-white lg:px-3 lg:text-2xl"
+            className="text-lg font-bold text-white lg:px-3 lg:text-3xl"
             ref={(el) => (linksRef.current[0] = el)}
           >
             <a
@@ -51,7 +51,7 @@ const NavBar = () => {
             </a>
           </li>
           <li
-            className="text-xl text-white lg:px-3 lg:text-4xl"
+            className="text-xl text-white lg:px-3 lg:text-5xl"
             ref={(el) => (linksRef.current[1] = el)}
           >
             <a target="_blank" href="https://github.com/luisdevelop23">
@@ -59,7 +59,7 @@ const NavBar = () => {
             </a>
           </li>
           <li
-            className="text-xl text-white lg:px-3 lg:text-4xl"
+            className="text-xl text-white lg:px-3 lg:text-5xl"
             ref={(el) => (linksRef.current[2] = el)}
           >
             <a

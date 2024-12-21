@@ -8,7 +8,7 @@ const CardProject = ({ app }) => {
       <img className="rounded-lg" src={image} alt="" />
 
       <div className="flex items-center justify-between">
-        <h1 className="NSB text-md mx-2 flex items-center text-zinc-300 transition-all duration-100 hover:text-[#4648f7] md:text-2xl">
+        <h1 className="NSB text-md mx-2 flex items-center text-zinc-300 transition-all duration-100 hover:text-[#9333ea] md:text-2xl">
           {title}
         </h1>
       </div>
@@ -32,7 +32,7 @@ const CardProject = ({ app }) => {
           href={url}
           target="_blank"
           rel="noreferrer"
-          className="NSB text-md flex items-center p-1 text-xl text-zinc-100 transition-all duration-100 hover:text-[#4648f7] md:p-3 md:text-3xl"
+          className="NSB text-md flex items-center p-1 text-xl text-zinc-100 transition-all duration-100 hover:text-[#9333ea] md:p-3 md:text-3xl"
         >
           <span className="icon-[icon-park-solid--web-page]"></span>
         </a>
@@ -41,7 +41,7 @@ const CardProject = ({ app }) => {
             href={github}
             target="_blank"
             rel="noreferrer"
-            className="text-md p-1 text-xl text-zinc-100 transition-all duration-100 hover:text-[#4648f7] md:p-3 md:text-3xl"
+            className="text-md p-1 text-xl text-zinc-100 transition-all duration-100 hover:text-[#9333ea] md:p-3 md:text-3xl"
           >
             <span className="icon-[lucide--github]"></span>
           </a>

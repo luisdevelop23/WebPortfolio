@@ -19,7 +19,7 @@ const BgBlue = () => {
   }, []);
 
   return (
-    <div className="hidden md:absolute z-10 flex h-[90vh] w-full items-end g-red-400 justify-between">
+    <div className="hidden md:absolute z-10  h-[90vh] w-full items-end g-red-400 justify-between">
       <span className="flex h-full flex-col justify-start">
         <svg
           ref={(el) => (circleRefs.current[0] = el)}

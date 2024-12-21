@@ -41,18 +41,18 @@ const Skilss = () => {
   return (
     <div
       ref={skillsRef}
-      className="flex flex-col gap-y-6 p-5 md:w-6/12 md:p-20"
+      className="flex flex-col gap-y-6 p-5 md:w-6/12 "
     >
-      <h1 className="NSB text-2xl font-bold text-[#4648f7] md:text-3xl">
+      <h1 className="NSB font-bold text-2xl text-[#9333ea] md:text-5xl">
         Skills
       </h1>
       <div className="NSB flex justify-around text-zinc-400 dark:text-zinc-100">
         <div className="w-full">
-          <h2 className="MD:text-2xl text-lg">Frontend</h2>
+          <h2 className="md:text-2xl text-lg">Frontend</h2>
           <ul className="list-inside pt-1 text-sm md:pl-4 md:text-lg">
             {SkillsFrontend.map((i, index) => (
               <li key={index}>
-                <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
+                <span className="icon-[mingcute--check-fill] mr-1 text-[#f43f5e]"></span>
                 {i.name}
               </li>
             ))}
@@ -63,7 +63,7 @@ const Skilss = () => {
           <ul className="list-inside pt-1 text-sm md:pl-4 md:text-lg">
             {SkillsBackend.map((i, index) => (
               <li key={index}>
-                <span className="icon-[mingcute--check-fill] mr-1 text-[#4648f7]"></span>
+                <span className="icon-[mingcute--check-fill] mr-1 text-[#f43f5e]"></span>
                 {i.name}
               </li>
             ))}
